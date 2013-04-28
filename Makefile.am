@@ -25,11 +25,13 @@ libuuid_la_SOURCES = \
 	uuidP.h \
 	uuid_time.c \
 	randutils.c \
-	$(uuidinc_HEADERS) \
-	all_io.h \
-	c.h \
-	randutil.h
+	$(uuidinc_HEADERS)
 
-libuuid_la_LIBADD       = $(SOCKET_LIBS)
-libuuid_la_CFLAGS       = -I$(top_srcdir)
+noinst_HEADERS = \
+	all-io.h \
+	c.h \
+	randutils.h
+
+libuuid_la_LIBADD  = $(SOCKET_LIBS)
+libuuid_la_CFLAGS  = -I$(top_srcdir)
 libuuid_la_LDFLAGS = -version-info $(LIBUUID_VERSION_INFO)
