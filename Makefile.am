@@ -1,8 +1,11 @@
-
 check_PROGRAMS = test_uuid
 test_uuid_SOURCES = test_uuid.c
 test_uuid_LDADD = libuuid.la $(SOCKET_LIBS)
 test_uuid_CFLAGS = -I$(top_srcdir)
+
+EXTRA_DIST = uuid.pc.in
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = uuid.pc
 
 # includes
 uuidincdir = $(includedir)/uuid

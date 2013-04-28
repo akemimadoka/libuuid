@@ -19,6 +19,7 @@ ltconfig
 ltmain.sh
 autom4te.cache
 autoscan.log
+uuid.pc
 *.tar.gz
 *.o
 *.la
