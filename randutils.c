@@ -34,9 +34,9 @@ int random_get_fd(void)
 	struct timeval	tv;
 
 	gettimeofday(&tv, 0);
-	fd = open("/dev/urandom", O_RDONLY | O_CLOEXEC);
+	fd = open("/dev/urandom", O_RDONLY);
 	if (fd == -1)
-		fd = open("/dev/random", O_RDONLY | O_NONBLOCK | O_CLOEXEC);
+		fd = open("/dev/random", O_RDONLY | O_NONBLOCK);
 	if (fd >= 0) {
 		i = fcntl(fd, F_GETFD);
 		if (i >= 0)
