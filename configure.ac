@@ -1,7 +1,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([libuuid], [1.0.1], [sloowfranklin@gmail.com])
+AC_INIT([libuuid], [1.0.3], [sloowfranklin@gmail.com])
 AC_CONFIG_SRCDIR([compare.c])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([foreign])
