@@ -21,6 +21,7 @@ AC_SUBST([SOCKET_LIBS])
 
 # Checks for header files.
 AC_CHECK_HEADERS([fcntl.h inttypes.h limits.h netinet/in.h stdlib.h string.h sys/file.h sys/ioctl.h sys/socket.h sys/time.h unistd.h])
+AC_CHECK_DECLS([_SC_HOST_NAME_MAX])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_TYPE_INT32_T

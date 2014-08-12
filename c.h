@@ -252,10 +252,12 @@ static inline int dirfd(DIR *d)
  */
 static inline size_t get_hostname_max(void)
 {
+#if HAVE_DECL__SC_HOST_NAME_MAX
 	long len = sysconf(_SC_HOST_NAME_MAX);
 
 	if (0 < len)
 		return len;
+#endif
 
 #ifdef MAXHOSTNAMELEN
 	return MAXHOSTNAMELEN;
