@@ -11,7 +11,15 @@
 
 #include <limits.h>
 #include <stddef.h>
+
+#ifdef HAVE_STDINT_H
 #include <stdint.h>
+#else
+# ifdef HAVE_INTTYPES_H
+# include <inttypes.h>
+# endif
+#endif
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
